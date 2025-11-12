@@ -1,14 +1,16 @@
 # Answers
 
-Repository of the sum tests for discover your points in the test with basis in your answers and the answer keys.
+Repository of summation tests to discover your test score based on your answers and the answer key.
 
 ## .csv File Names
 
-- Answer is answer.csv
-- Answer key is answer_key.csv
+- Answers: answer.csv
+- Answer Key: answer_key.csv
 
-### Structure of the .csv's
+### .csv File Structure
 
-First column is named of _Question_ and the second is _Answer_
+The first column is named _Question_ and the second _Answer_.
 
-This columns is separated with `;`
+These columns are separated by `;`.
+
+This program supports a maximum of 512 answer choices. Furthermore, questions are disregarded.
