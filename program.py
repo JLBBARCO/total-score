@@ -31,7 +31,7 @@ if 'Class' not in answerKeyFile.columns:
 else:
     class_column_exists = True
 
-score_total = int(input('Enter the total score for the test: '))
+score_total = answerKeyFile['Score'].iloc[0]
 num_questions = len(answerKeyFile)
 score_per_question = score_total / num_questions
 
@@ -50,8 +50,8 @@ with open('result.txt', 'a', encoding='utf-8') as f:
         q_score = pointAnswers.answer_single_question(student, correct, score_per_question)
         scores_per_question.append(q_score)
         total_score += q_score
-        print(f'Question {idx} ({q_label}) - {q_score}')
-        f.write(f'Question {idx} ({q_label}) - {q_score}\n')
+        print(f'Question {q_label} - {q_score}')
+        f.write(f'Question {q_label} - {q_score}\n')
 
         # Add the score to the respective class total
         if class_column_exists:
