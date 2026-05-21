@@ -8,3 +8,5 @@ answer_key.tsv
 .vscode/
 dist/
 build/
+.venv/
+env/
